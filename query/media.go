@@ -148,14 +148,14 @@ type CoverImage struct {
 
 // Tags object contais the ID for tags
 type Tags struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-	/*Description      string `json:"description"`
+	ID               int    `json:"id"`
+	Name             string `json:"name"`
+	Description      string `json:"description"`
 	Category         string `json:"category"`
 	Rank             int    `json:"rank"`
 	IsGeneralSpoiler bool   `json:"isGeneralSpoiler"`
 	IsMediaSpoiler   bool   `json:"isMediaSpoiler"`
-	IsAdult          bool   `json:"isAdult"`*/
+	IsAdult          bool   `json:"isAdult"`
 }
 
 // Relations Object I believe relations to the anime/manga
@@ -305,6 +305,12 @@ const mediaQuery = `id,
 				tags {
 				  id,
 				  name,
+				  description,
+				  category,
+				  rank,
+    			  isGeneralSpoiler,
+    			  isMediaSpoiler,
+    			  isAdult,
 				},
 				relations {
 				  edges {
